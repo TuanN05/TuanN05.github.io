@@ -1,11 +1,11 @@
 // Dữ liệu cá nhân lưu trong bộ nhớ
 let personalData = {
-  fullName: "Nguyễn Văn An",
-  birthDate: "15/03/2002",
+  fullName: "Nguyễn Thái Tuấn",
+  birthDate: "22/09/2005",
   gender: "Nam",
   address: "TP. Hồ Chí Minh",
-  phone: "0123.456.789",
-  email: "nguyenvanan@gmail.com",
+  phone: "0359426405",
+  email: "nguyenthaituan205@gmail.com",
   careerGoal:
     "Trở thành một lập trình viên Full-stack chuyên nghiệp, có khả năng phát triển các ứng dụng web hiện đại và đóng góp vào các dự án công nghệ có tác động tích cực đến cộng đồng.",
 };
@@ -205,35 +205,20 @@ document.querySelectorAll(".section").forEach((section) => {
   });
 });
 
-// Easter egg: Double click vào ảnh profile để thay đổi
-document.getElementById("profileImg").addEventListener("dblclick", function () {
-  const images = [
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=200&h=200&fit=crop&crop=face",
-  ];
-
-  const randomImage = images[Math.floor(Math.random() * images.length)];
-  this.src = randomImage;
-
-  showNotification("Ảnh đại diện đã được thay đổi!");
-});
-
 // Console easter egg
 console.log(`
-╔══════════════════════════════════════╗
-║        🎉 CV Cá Nhân v1.0 🎉        ║
-║                                      ║
-║   Được tạo bởi: Claude (Anthropic)   ║
-║   Thiết kế: Modern & Responsive      ║
-║   Công nghệ: HTML5, CSS3, JS        ║
-║                                      ║
-║   💡 Tips:                           ║
-║   - Double click vào ảnh profile     ║
-║   - Sử dụng nút "Chỉnh sửa"         ║
-║   - Scroll để xem animations         ║
-╚══════════════════════════════════════╝
+╔════════════════════════════════════════════════╗
+║           🚀 CV Cá Nhân v1.0 🚀              ║
+║                                              ║
+║   Tác giả: Nguyễn Thái Tuấn                  ║
+║   Thiết kế: Hiện đại & Tương thích di động   ║
+║   Công nghệ: HTML5, CSS3, JavaScript         ║
+║                                              ║
+║   💡 Mẹo sử dụng:                            ║
+║   - Nhấn đúp vào ảnh đại diện để đổi ảnh     ║
+║   - Nhấn nút "Chỉnh sửa thông tin" để cập nhật║
+║   - Kéo xuống để xem hiệu ứng động           ║
+╚════════════════════════════════════════════════╝
     `);
 
 // Theme toggle functionality

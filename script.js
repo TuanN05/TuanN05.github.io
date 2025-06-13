@@ -215,7 +215,6 @@ console.log(`
 ║   Công nghệ: HTML5, CSS3, JavaScript         ║
 ║                                              ║
 ║   💡 Mẹo sử dụng:                            ║
-║   - Nhấn đúp vào ảnh đại diện để đổi ảnh     ║
 ║   - Nhấn nút "Chỉnh sửa thông tin" để cập nhật║
 ║   - Kéo xuống để xem hiệu ứng động           ║
 ╚════════════════════════════════════════════════╝
@@ -228,16 +227,29 @@ function toggleTheme() {
   isDarkMode = !isDarkMode;
   const body = document.body;
   const themeIcon = document.getElementById("themeIcon");
+  const profileImg = document.getElementById("profileImg");
 
   if (isDarkMode) {
-    body.style.filter = "invert(1) hue-rotate(180deg)";
-    body.style.transition = "filter 0.3s ease";
+    body.classList.add("dark-mode");
     themeIcon.className = "fas fa-sun";
+    // Loại bỏ invert cho ảnh profile nếu có
+    if (profileImg) profileImg.style.filter = "none";
   } else {
-    body.style.filter = "none";
+    body.classList.remove("dark-mode");
     themeIcon.className = "fas fa-moon";
+    if (profileImg) profileImg.style.filter = "none";
   }
 }
+
+// Hiển thị/ẩn nút Back to Top khi cuộn trang
+window.addEventListener("scroll", function () {
+  const btn = document.getElementById("backToTopBtn");
+  if (window.scrollY > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
 
 // Highlight active navigation
 window.addEventListener("scroll", function () {

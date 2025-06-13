@@ -652,3 +652,95 @@ body {
   transform: scale(1.1);
   background: #5a6fd8;
 }
+
+/* Dark mode styles */
+body.dark-mode {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #e0e0e0;
+}
+
+body.dark-mode .container {
+  background: #232526;
+  color: #e0e0e0;
+}
+
+body.dark-mode .section {
+  background: #2c2f34;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background: #181a1b;
+}
+
+body.dark-mode .nav-link {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-link.active,
+body.dark-mode .nav-link:hover {
+  background: #232526;
+  color: #fff;
+}
+
+body.dark-mode .personal-info .info-item {
+  background: #232526;
+  color: #e0e0e0;
+}
+
+body.dark-mode .personal-info .info-item i {
+  color: #667eea;
+}
+
+body.dark-mode .personal-info .info-item:hover {
+  background: #667eea;
+  color: #fff;
+}
+
+body.dark-mode .project-item {
+  background: #232526;
+  color: #e0e0e0;
+}
+
+body.dark-mode .contact-link {
+  background: linear-gradient(135deg, #232526, #414345);
+  color: #e0e0e0;
+}
+
+body.dark-mode .edit-btn,
+body.dark-mode .save-btn {
+  background: #414345;
+  color: #fff;
+}
+
+body.dark-mode .edit-btn:hover,
+body.dark-mode .save-btn:hover {
+  background: #232526;
+}
+
+body.dark-mode .modal-content {
+  background: #232526;
+  color: #e0e0e0;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background: #181a1b;
+  color: #e0e0e0;
+  border-color: #414345;
+}
+
+body.dark-mode .section h2 {
+  color: #66c2ff; /* Vàng sáng nổi bật */
+  border-bottom: 3px solid #66c2ff;
+}
+
+body.dark-mode .section h2 i {
+  color: #66c2ff; /* Vàng sáng nổi bật */
+}
+
+/* Không invert ảnh profile trong dark mode */
+body.dark-mode #profileImg {
+  filter: none !important;
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Cá Nhân - Nguyễn Văn An</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="banner">
+        <div class="banner-content">
+          <div class="profile-info">
+            <h1 id="fullName">Nguyễn Văn An</h1>
+            <div class="subtitle">Sinh viên Công nghệ Thông tin</div>
+            <div class="description">Đam mê lập trình và công nghệ mới</div>
+          </div>
+          <div class="profile-image">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+              alt="Ảnh profile"
+              id="profileImg"
+            />
+          </div>
+        </div>
+      </header>
+
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#personal" class="nav-link"
+              ><i class="fas fa-user"></i> Cá nhân</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#goals" class="nav-link"
+              ><i class="fas fa-target"></i> Mục tiêu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link"
+              ><i class="fas fa-code"></i> Kỹ năng</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link"
+              ><i class="fas fa-project-diagram"></i> Dự án</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link"
+              ><i class="fas fa-envelope"></i> Liên hệ</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        <section class="section" id="personal">
+          <h2><i class="fas fa-user"></i> Thông tin cá nhân</h2>
+          <div class="personal-info">
+            <div class="info-item">
+              <i class="fas fa-calendar"></i>
+              <span
+                ><strong>Ngày sinh:</strong>
+                <span id="birthDate">15/03/2002</span></span
+              >
+            </div>
+            <div class="info-item">
+              <i class="fas fa-venus-mars"></i>
+              <span
+                ><strong>Giới tính:</strong> <span id="gender">Nam</span></span
+              >
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span
+                ><strong>Địa chỉ:</strong>
+                <span id="address">TP. Hồ Chí Minh</span></span
+              >
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <span
+                ><strong>Điện thoại:</strong>
+                <span id="phone">0123.456.789</span></span
+              >
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span
+                ><strong>Email:</strong>
+                <span id="email">nguyenvanan@gmail.com</span></span
+              >
+            </div>
+          </div>
+          <button class="edit-btn" onclick="openEditModal()">
+            <i class="fas fa-edit"></i> Chỉnh sửa thông tin
+          </button>
+        </section>
+
+        <section class="section" id="goals">
+          <h2><i class="fas fa-target"></i> Mục tiêu nghề nghiệp</h2>
+          <p id="careerGoal">
+            Trở thành một lập trình viên Full-stack chuyên nghiệp, có khả năng
+            phát triển các ứng dụng web hiện đại và đóng góp vào các dự án công
+            nghệ có tác động tích cực đến cộng đồng.
+          </p>
+        </section>
+
+        <section class="section" id="hobbies">
+          <h2><i class="fas fa-heart"></i> Sở thích cá nhân</h2>
+          <div id="hobbiesList">
+            <p><i class="fas fa-code"></i> Lập trình và học công nghệ mới</p>
+            <p><i class="fas fa-gamepad"></i> Chơi game và thiết kế game</p>
+            <p><i class="fas fa-book"></i> Đọc sách về công nghệ</p>
+            <p><i class="fas fa-music"></i> Nghe nhạc và chơi guitar</p>
+          </div>
+        </section>
+
+        <section class="section" id="languages">
+          <h2><i class="fas fa-language"></i> Ngôn ngữ</h2>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Tiếng Việt</span>
+              <span>Bản ngữ</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Tiếng Anh</span>
+              <span>Trung cấp</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="skills">
+          <h2><i class="fas fa-code"></i> Kỹ năng chuyên môn</h2>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>HTML/CSS</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>JavaScript</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Python</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Java</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="certificates">
+          <h2><i class="fas fa-award"></i> Chứng chỉ & Giải thưởng</h2>
+          <div id="certificatesList">
+            <div class="project-item">
+              <div class="project-title">Chứng chỉ HTML/CSS - FreeCodeCamp</div>
+              <p>Hoàn thành khóa học Responsive Web Design (2023)</p>
+            </div>
+            <div class="project-item">
+              <div class="project-title">
+                Giải Nhì Cuộc thi Lập trình Sinh viên
+              </div>
+              <p>Đại học ABC - Năm 2023</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section full-width" id="projects">
+          <h2><i class="fas fa-project-diagram"></i> Dự án cá nhân</h2>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 20px;
+            "
+          >
+            <div class="project-item">
+              <div class="project-title">Website Quản lý Thư viện</div>
+              <p>
+                <strong>Mô tả:</strong> Hệ thống quản lý sách, độc giả và mượn
+                trả sách cho thư viện trường học.
+              </p>
+              <p>
+                <strong>Công nghệ:</strong> HTML, CSS, JavaScript, PHP, MySQL
+              </p>
+              <p><strong>Vai trò:</strong> Full-stack Developer</p>
+            </div>
+            <div class="project-item">
+              <div class="project-title">Ứng dụng Quản lý Chi tiêu</div>
+              <p>
+                <strong>Mô tả:</strong> Ứng dụng mobile giúp người dùng theo dõi
+                và quản lý chi tiêu cá nhân.
+              </p>
+              <p><strong>Công nghệ:</strong> React Native, Firebase</p>
+              <p><strong>Vai trò:</strong> Mobile Developer</p>
+            </div>
+            <div class="project-item">
+              <div class="project-title">Game Puzzle 2D</div>
+              <p>
+                <strong>Mô tả:</strong> Game giải đố với đồ họa 2D và nhiều
+                level thử thách.
+              </p>
+              <p><strong>Công nghệ:</strong> Unity, C#</p>
+              <p><strong>Vai trò:</strong> Game Developer</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section full-width" id="contact">
+          <h2><i class="fas fa-envelope"></i> Thông tin liên hệ</h2>
+          <div class="contact-links">
+            <a href="#" class="contact-link">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="#" class="contact-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="contact-link">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="#" class="contact-link">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:nguyenvanan@gmail.com" class="contact-link">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="tel:0123456789" class="contact-link">
+              <i class="fas fa-phone"></i> Điện thoại
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeEditModal()">&times;</span>
+        <h2>Chỉnh sửa thông tin cá nhân</h2>
+        <form id="editForm">
+          <div class="form-group">
+            <label for="editFullName">Họ và tên:</label>
+            <input type="text" id="editFullName" name="fullName" />
+          </div>
+          <div class="form-group">
+            <label for="editBirthDate">Ngày sinh:</label>
+            <input type="text" id="editBirthDate" name="birthDate" />
+          </div>
+          <div class="form-group">
+            <label for="editGender">Giới tính:</label>
+            <select
+              id="editGender"
+              name="gender"
+              style="
+                width: 100%;
+                padding: 12px;
+                border: 2px solid #e0e0e0;
+                border-radius: 8px;
+              "
+            >
+              <option value="Nam">Nam</option>
+              <option value="Nữ">Nữ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="editAddress">Địa chỉ:</label>
+            <input type="text" id="editAddress" name="address" />
+          </div>
+          <div class="form-group">
+            <label for="editPhone">Điện thoại:</label>
+            <input type="text" id="editPhone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="editEmail">Email:</label>
+            <input type="email" id="editEmail" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="editCareerGoal">Mục tiêu nghề nghiệp:</label>
+            <textarea id="editCareerGoal" name="careerGoal" rows="4"></textarea>
+          </div>
+          <button type="submit" class="save-btn">
+            <i class="fas fa-save"></i> Lưu thay đổi
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <button
+      class="theme-toggle"
+      onclick="toggleTheme()"
+      title="Chuyển đổi theme"
+    >
+      <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

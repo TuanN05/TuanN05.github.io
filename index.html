@@ -344,94 +344,133 @@
           </form>
         </section>
       </main>
-    </div>
 
-    <div id="editModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeEditModal()">&times;</span>
-        <h2>Chỉnh sửa thông tin cá nhân</h2>
-        <form id="editForm">
-          <div class="form-group">
-            <label for="editFullName">Họ và tên:</label>
-            <input type="text" id="editFullName" name="fullName" />
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Về tôi</h3>
+            <p>
+              Sinh viên CNTT đam mê lập trình và công nghệ mới. Luôn tìm tòi học
+              hỏi để phát triển bản thân.
+            </p>
           </div>
-          <div class="form-group">
-            <label for="editBirthDate">Ngày sinh:</label>
-            <input type="text" id="editBirthDate" name="birthDate" />
+          <div class="footer-section">
+            <h3>Links nhanh</h3>
+            <ul>
+              <li><a href="#personal">Thông tin cá nhân</a></li>
+              <li><a href="#skills">Kỹ năng</a></li>
+              <li><a href="#projects">Dự án</a></li>
+              <li><a href="#contact">Liên hệ</a></li>
+            </ul>
           </div>
-          <div class="form-group">
-            <label for="editGender">Giới tính:</label>
-            <select
-              id="editGender"
-              name="gender"
-              style="
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #e0e0e0;
-                border-radius: 8px;
-              "
-            >
-              <option value="Nam">Nam</option>
-              <option value="Nữ">Nữ</option>
-            </select>
+          <div class="footer-section">
+            <h3>Mạng xã hội</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/ngtuan26405" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://github.com/tuann05" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="editAddress">Địa chỉ:</label>
-            <input type="text" id="editAddress" name="address" />
-          </div>
-          <div class="form-group">
-            <label for="editPhone">Điện thoại:</label>
-            <input type="text" id="editPhone" name="phone" />
-          </div>
-          <div class="form-group">
-            <label for="editEmail">Email:</label>
-            <input type="email" id="editEmail" name="email" />
-          </div>
-          <div class="form-group">
-            <label for="editCareerGoal">Mục tiêu nghề nghiệp:</label>
-            <textarea id="editCareerGoal" name="careerGoal" rows="4"></textarea>
-          </div>
-          <button type="submit" class="save-btn">
-            <i class="fas fa-save"></i> Lưu thay đổi
-          </button>
-        </form>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Nguyễn Thái Tuấn. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <div id="editModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeEditModal()">&times;</span>
+          <h2>Chỉnh sửa thông tin cá nhân</h2>
+          <form id="editForm">
+            <div class="form-group">
+              <label for="editFullName">Họ và tên:</label>
+              <input type="text" id="editFullName" name="fullName" />
+            </div>
+            <div class="form-group">
+              <label for="editBirthDate">Ngày sinh:</label>
+              <input type="text" id="editBirthDate" name="birthDate" />
+            </div>
+            <div class="form-group">
+              <label for="editGender">Giới tính:</label>
+              <select
+                id="editGender"
+                name="gender"
+                style="
+                  width: 100%;
+                  padding: 12px;
+                  border: 2px solid #e0e0e0;
+                  border-radius: 8px;
+                "
+              >
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="editAddress">Địa chỉ:</label>
+              <input type="text" id="editAddress" name="address" />
+            </div>
+            <div class="form-group">
+              <label for="editPhone">Điện thoại:</label>
+              <input type="text" id="editPhone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="editEmail">Email:</label>
+              <input type="email" id="editEmail" name="email" />
+            </div>
+            <div class="form-group">
+              <label for="editCareerGoal">Mục tiêu nghề nghiệp:</label>
+              <textarea
+                id="editCareerGoal"
+                name="careerGoal"
+                rows="4"
+              ></textarea>
+            </div>
+            <button type="submit" class="save-btn">
+              <i class="fas fa-save"></i> Lưu thay đổi
+            </button>
+          </form>
+        </div>
       </div>
+
+      <button
+        class="theme-toggle"
+        onclick="toggleTheme()"
+        title="Chuyển đổi theme"
+      >
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+
+      <!-- Nút Back to Top  -->
+      <button
+        id="backToTopBtn"
+        title="Lên đầu trang"
+        style="
+          display: none;
+          position: fixed;
+          bottom: 80px;
+          right: 20px;
+          z-index: 1000;
+          background: #764ba2;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          font-size: 22px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+          transition: all 0.3s;
+        "
+        onclick="window.scrollTo({top:0, behavior:'smooth'})"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </button>
+
+      <script src="script.js"></script>
     </div>
-
-    <button
-      class="theme-toggle"
-      onclick="toggleTheme()"
-      title="Chuyển đổi theme"
-    >
-      <i class="fas fa-moon" id="themeIcon"></i>
-    </button>
-
-    <!-- Nút Back to Top  -->
-    <button
-      id="backToTopBtn"
-      title="Lên đầu trang"
-      style="
-        display: none;
-        position: fixed;
-        bottom: 80px;
-        right: 20px;
-        z-index: 1000;
-        background: #764ba2;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 22px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        transition: all 0.3s;
-      "
-      onclick="window.scrollTo({top:0, behavior:'smooth'})"
-    >
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="script.js"></script>
   </body>
 </html>

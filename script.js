@@ -463,3 +463,41 @@ class ParticleSystem {
 window.addEventListener("load", () => {
   new ParticleSystem();
 });
+
+// Hamburger Menu
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const navList = document.getElementById("navList");
+
+// Create overlay element
+const overlay = document.createElement("div");
+overlay.className = "nav-overlay";
+document.body.appendChild(overlay);
+
+// Toggle menu
+function toggleMenu() {
+  hamburgerBtn.classList.toggle("active");
+  navList.classList.toggle("active");
+  overlay.classList.toggle("active");
+  document.body.style.overflow = navList.classList.contains("active")
+    ? "hidden"
+    : "";
+}
+
+hamburgerBtn.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", toggleMenu);
+
+// Close menu when clicking a nav link
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (navList.classList.contains("active")) {
+      toggleMenu();
+    }
+  });
+});
+
+// Close menu on window resize if open
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768 && navList.classList.contains("active")) {
+    toggleMenu();
+  }
+});
